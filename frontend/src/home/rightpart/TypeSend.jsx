@@ -4,8 +4,8 @@ import { IoSendSharp } from "react-icons/io5";
 
 function TypeSend() {
     return (
-        <div className="flex text-center space-x-2 h-[8vh]">
-            <div className="w-[70%]">
+        <div className="flex text-center space-x-2 h-[8vh] pl-5 ">
+            <div className="w-[70%] text-black">
                 <input
                     type="text"
                     placeholder="Type here"

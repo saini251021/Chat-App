@@ -7,7 +7,7 @@ function User() {
             <h1 className='px-8 py-2 text-white font-semibold bg-slate-800 rounded-md '>
                 Messages
             </h1>
-            <div className='my-2 flex-1 no-scrollbar overflow-y-auto' style={{maxHeight: "calc(87vh - 8vh)"}} >
+            <div className='my-2 flex-1 no-scrollbar overflow-y-auto' style={{maxHeight: "calc(78vh - 8vh)"}} >
                 <UserComponent/>
                 <UserComponent/>
                 <UserComponent/>
