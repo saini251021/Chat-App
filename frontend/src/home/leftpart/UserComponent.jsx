@@ -1,6 +1,6 @@
 import React from 'react'
 
-function UserComponent() {
+function UserComponent({user}) {
     return (
         <div className='flex space-x-4 px-6 py-3 hover:bg-slate-700 duration-300 cursor-pointer'>
             <div className="avatar avatar-online">
@@ -9,8 +9,8 @@ function UserComponent() {
                 </div>
             </div>
             <div>
-                <h1 className='font-bold'>navjot</h1>
-                <span>nav@dev.com</span>
+                <h1 className='font-bold'>{user.name}</h1>
+                <span>{user.email}</span>
             </div>
         </div>
     )

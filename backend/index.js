@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import userRouter from './routes/user.route.js';
 import cors from 'cors';
+import cookieParser from 'cookie-parser';
 dotenv.config();
 
 
@@ -15,7 +16,7 @@ app.use(cors({
   origin: 'http://localhost:5173', // your frontend URL
   credentials: true
 }));
-
+app.use(cookieParser());
 
 mongoose.connect(process.env.MONGODB_URI)
 .then(() => console.log('MongoDB connected'))
