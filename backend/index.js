@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import userRouter from './routes/user.route.js';
+import messageRouter from "./routes/message.route.js"
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 dotenv.config();
@@ -27,6 +28,7 @@ app.get('/', (req, res) => {
 }); 
 
 app.use('/user', userRouter)
+app.use('/message', messageRouter)
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
