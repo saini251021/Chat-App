@@ -5,11 +5,11 @@ import userRouter from './routes/user.route.js';
 import messageRouter from "./routes/message.route.js"
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
+import { app, server } from './socketIO/socketServer.js';
 dotenv.config();
 
-
-const app = express();
 const port = process.env.PORT || 3000;
+
 app.use(express.json());
 // app.use(cors());
 
@@ -30,6 +30,10 @@ app.get('/', (req, res) => {
 app.use('/user', userRouter)
 app.use('/message', messageRouter)
 
-app.listen(port, () => {
+// app.listen(port, () => {
+//   console.log(`Example app listening at http://localhost:${port}`);
+// });
+
+server.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });

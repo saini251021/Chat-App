@@ -9,7 +9,7 @@ import { Navigate, Route, Routes } from "react-router-dom"
 import Loading from "./components/loading"
 function App() {
   const [authUser, setAuthUser] = useAuth()
-  console.log("Auth User:", authUser);
+  // console.log("Auth User:", authUser);
 
   return (
     <>
