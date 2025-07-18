@@ -23,7 +23,7 @@ function Logout() {
     }
 
     return (
-        <div className='h-8vh'>
+        <div className='h-8vh bg-slate-800'>
             <div>
                 <button onClick={handleLogout}><AiOutlineLogout className="hover:bg-gray-600 duration-300 ease-in-out cursor-pointer rounded-full text-5xl ml-2 p-2" /></button>
             </div>

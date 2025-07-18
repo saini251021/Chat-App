@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useAuth } from "../context/Authprovider";
+import toast from "react-hot-toast";
 
 function Login() {
     const [authUser, setAuthUser] = useAuth()
@@ -22,14 +23,14 @@ function Login() {
         .then((response) => {
             console.log("Response from server:", response.data);
             if (response.data) {
-                alert("login successful!");
+                toast.success("login successful!");
             }
             localStorage.setItem("user", JSON.stringify(response.data));
             setAuthUser(response.data);
         })
         .catch((error) => {
             if (error.response) {
-                alert("Error: " + error.response.data.error);
+                toast.error("Error: " + error.response.data.error);
             }
         });
     }

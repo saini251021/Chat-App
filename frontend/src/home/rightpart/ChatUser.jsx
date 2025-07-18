@@ -1,10 +1,10 @@
 import React from 'react'
 import useGetMessages from '../../context/useGetMessages'
-import { useSocketContext } from '../../context/socketContext';
+import { UseSocketContext } from '../../context/socketContext';
 
 function ChatUser() {
     const {selectedConversation}= useGetMessages()
-    const {socket, onlineUsers}=useSocketContext();
+    const {socket, onlineUsers}=UseSocketContext();
     const isOnline=onlineUsers.includes(selectedConversation._id)
     // console.log("in chat user ",selectedConversation)
     return (

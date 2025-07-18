@@ -5,11 +5,11 @@ import { useContext } from "react";
 const socketContext = createContext()
 
 // it is a hook
-export const useSocketContext=()=>{
-    return useContext(socketContext)
+export const UseSocketContext=()=>{
+    return ( useContext(socketContext))
 }
 
-const SocketProvider = ({ children }) => {
+export const SocketProvider = ({ children }) => {
     const [socket, setSocket] = useState(null);
     const [onlineUsers, setOnlineUsers]=useState([])
     const [authUser] = useAuth()
@@ -43,4 +43,3 @@ const SocketProvider = ({ children }) => {
     )
 };
 
-export default SocketProvider

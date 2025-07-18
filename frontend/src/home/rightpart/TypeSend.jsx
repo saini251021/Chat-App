@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 <input type="text" placeholder="Type here" className="input" />
 import { IoSendSharp } from "react-icons/io5";
-import useSendMessage from '../../context/useSendMessage.js';
+import useSendMessage from '../../context/useSendMessage.jsx';
 
 function TypeSend() {
     const [message, setMessage] = useState('')
@@ -11,10 +11,11 @@ function TypeSend() {
         await sendMessage(message)
         setMessage("")
     }
+
     return (
         <form onSubmit={handleSubmit}>
             <div className="flex text-center space-x-2 h-[8vh] pl-5 ">
-                <div className="w-[70%] text-black">
+                <div className="w-[80%] text-black">
                     <input
                         value={message}
                         type="text"

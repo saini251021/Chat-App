@@ -2,11 +2,12 @@ import React, { useEffect, useRef } from 'react'
 import MessageComp from './MessageComp'
 import useGetMessages from '../../context/useGetMessages.jsx'
 import Loading from '../../components/loading.jsx';
+import useGetSocketMessage from '../../context/useGetSocketMessage.jsx';
 
 function Messages() {
     const { loading, messages } = useGetMessages();
     // console.log("in message jsx ", messages)
-
+    useGetSocketMessage()
     const lastMesRef = useRef()
     useEffect(() => {
         setTimeout(() => {
@@ -18,7 +19,7 @@ function Messages() {
     return (
         <div
             className="my-2 flex-1 no-scrollbar overflow-y-auto"
-            style={{ maxHeight: "calc(89vh - 8vh)" }}
+            style={{ maxHeight: "calc(88vh - 8vh)" }}
         >
             {loading ? (
                 <Loading />
