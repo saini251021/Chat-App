@@ -6,7 +6,8 @@ function ChatUser() {
     const {selectedConversation}= useGetMessages()
     const {socket, onlineUsers}=UseSocketContext();
     const isOnline=onlineUsers.includes(selectedConversation._id)
-    // console.log("in chat user ",selectedConversation)
+    console.log("in chat user ",selectedConversation)
+    console.log("isOnline",isOnline)
     return (
         <div className='flex space-x-6 items-center justify-center bg-gray-800 hover:bg-gray-600 duration-300'>
             <div className={`avatar avatar-${isOnline? "online":""}`}>
